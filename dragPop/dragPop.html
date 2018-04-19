@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>窗口拖拽（改变大小/最小化/最大化/还原/关闭）</title>
+<link rel="stylesheet" type="text/css" href="dragPop.css">
+</head>
+
+<body>
+
+<button id="btn1">showFunc</button>
+<button id="btn2">switchTarget</button>
+<button id="btn3">lock</button>
+<button id="btn4"></button>
+
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="dragPop.js"></script>
+<script type="text/javascript">
+var drag1 = new dragPop({
+	title:'这是一个可以拖动的窗口',
+	content: '<form>First name:<br><input type="text" name="firstname"><br>Last name:<br><input type="text" name="lastname"></form> ',
+});
+$('#btn1').on('click',function(){
+	drag1.showFunc();
+})
+
+var drag2 = new dragPop({
+	title:'这是一个可以拖动的窗口',
+	content: '1.窗口<br>2.最小化还原按钮 ',
+	minBackBtn: true	// 最小化还原按钮
+});
+$('#btn2').on('click',function(){
+	drag2.showFunc();
+})
+
+var drag3 = new dragPop({
+	title:'这是一个可以拖动的窗口',
+	content: '1.窗口<br>2.遮罩层',
+	lock: true	// 遮罩层
+});
+$('#btn3').on('click',function(){
+	drag3.showFunc();
+})
+
+</script>
+
+</body>
+</html>
