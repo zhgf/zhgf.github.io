@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>金牌厨柜</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+	<meta name="format-detection" content="telephone=no" /> 
+	<meta name="format-detection" content="email=no" /> 
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/163scale.js"></script>
+</head>
+<body>
+
+<div class="bg-list">
+	<img src="images/index_l_01.jpg">
+	<img src="images/index_l_02.jpg">
+	<img src="images/index_l_03.jpg">
+	<img src="images/index_l_04.jpg">
+	<img src="images/index_l_05.jpg">
+	<img src="images/index_l_06.jpg">
+</div>
+
+<div class="content">
+
+    <div class="rotate">
+        <div class="rotate-img"><img src="images/rotate.png"></div>
+        <div class="rotate-pointer"><img src="images/pointer.png"></div>
+    </div>
+
+    <div class="gifts">
+        <img src="images/gifts.png">
+    </div>
+
+    <div class="rules">
+        <p>1、每个id仅限1次抽奖机会。</p>
+        <p>2、中奖后将以短信的形式通知，活动结束后不另行通知。</p>
+        <p>3、奖品仅限线下门店领取，此活动不提供邮递不可折现。</p>
+        <p>4、领取奖品前，需提前一天内将抽奖链接转发到朋友圈（分组无效）,到店出示转发证明和短信。</p>
+        <p>5、奖品数量有限，先到先得，奖品需在7天内领取，逾期作废。 </p>
+        <p>6、已下定或已下单客户参与无效。</p>
+        <p style="color: #ff000a;">活动时间：2018年4月20-5月13日</p>
+    </div>
+
+    <div class="qrcode">
+        <img src="images/qrcode.png">
+    </div>
+
+</div>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/jQueryRotate.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+function runzp(result) {
+	// 奖项json
+	var data = [
+		{"id":1,"message":"一等奖：11",},
+		{"id":2,"message":"二等奖：22"},
+		{"id":3,"message":"三等奖：33"},
+		{"id":4,"message":"四等奖：44"},
+		{"id":5,"message":"五等奖：55"},
+		{"id":6,"message":"安慰奖：继续努力！"}
+	];
+	var myreturn = new Object();
+	var index = parseInt(result) - 1; 
+	myreturn.angle = ( parseInt(data[index].id) - 1)* (360/data.length);
+	myreturn.message = data[index].message;
+	return myreturn;
+}
+// 转盘
+var rotateFlag = true;
+$(".rotate-pointer").rotate({
+    bind:{
+        click:function(){
+            if(rotateFlag){
+                rotateFlag = false;
+                $.ajax({
+                    url:' ',
+                    type:'get',
+                    dataType: "json", 
+                    data:{ },
+                    success:function(res){
+                        if(res.code == 0){
+                            //抽奖成功  
+                            var gamereturn = runzp(res.result); ;         
+                            $('.rotate-pointer').rotate({
+                                duration:3000,                      //转动时间
+                                angle: 0,                           //起始角度
+                                animateTo:1440+gamereturn.angle,    //结束的角度
+                                //easing: $.easing.easeOutSine,     //动画效果，需加载jquery.easing.min.js
+                                callback: function(){
+                                    var msg = gamereturn.data[res.result-1].message;
+                                    alert(msg);
+                                    rotateFlag = true;
+                                }
+                            });                      
+                        } else {
+                            alert(res.msg);
+                            rotateFlag = true;
+                        }                                           
+                    },
+                    error:function(){
+                        alert('请刷新重试！');
+                        rotateFlag = true;
+                    }
+                })
+            }
+        }
+    }
+}); 
+
+})
+</script>
+</body>
+</html>

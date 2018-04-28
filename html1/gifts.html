@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>金牌厨柜</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover"/>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" /> 
+	<meta name="format-detection" content="telephone=no" /> 
+	<meta name="format-detection" content="email=no" /> 
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/163scale.js"></script>
+</head>
+<body>
+
+<div class="bg-list">
+	<img src="images/index_01.jpg">	
+	<img src="images/index_02.jpg">	
+</div>
+
+<div class="content">
+	<div class="gifts" style="position:relative;top: 3.2rem">
+		<img src="images/gifts.png">
+		<div class="gifts-btn flexbox flexbox-middle">
+			<a class="flexchild" id="rule-btn">抽奖规则</a>
+			<a class="flexchild" href="index.html">返回抽奖</a>
+		</div>
+	</div>
+	
+</div>
+
+<div id="gifts-pop" class="gifts-pop" style="display: none;">
+	<div class="mask"></div>
+	<div class="rules">
+        <p>1、每个id仅限1次抽奖机会。</p>
+        <p>2、中奖后将以短信的形式通知，活动结束后不另行通知。</p>
+        <p>3、奖品仅限线下门店领取，此活动不提供邮递不可折现。</p>
+        <p>4、领取奖品前，需提前一天内将抽奖链接转发到朋友圈（分组无效）,到店出示转发证明和短信。</p>
+        <p>5、奖品数量有限，先到先得，奖品需在7天内领取，逾期作废。 </p>
+        <p>6、已下定或已下单客户参与无效。</p>
+        <p style="color: #ff000a;">活动时间：2018年4月20-5月13日</p>
+    </div>
+    <div class="pop-close"></div>
+</div>
+
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript">
+$(function(){
+
+	$('#rule-btn').on('click',function(){
+		$('#gifts-pop').show();
+	})
+
+	$('#gifts-pop .pop-close').on('click',function(){
+		$('#gifts-pop').hide();
+	})
+
+})
+</script>
+
+</body>
+</html>

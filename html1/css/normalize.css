@@ -1,0 +1,247 @@
+/*! normalize.css v4.1.1  */
+
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -ms-text-size-adjust:100%;   /* 文字缩放 */
+  -webkit-text-size-adjust: 100%; 
+  -moz-text-size-adjust: 100%;  
+  text-size-adjust: 100%;  
+}
+body {
+  margin: 0;
+  padding-bottom: constant(safe-area-inset-bottom)
+}
+body,dd,div,dl,dt,h1,h2,h3,h4,h5,h6,li,ol,p,ul,th,td,
+article,aside,blockquote,body,button,code,dd,details,div,dl,dt,fieldset,figcaption,figure,footer,form,
+header,hgroup,hr,input,legend,menu,nav,pre,section,textarea{
+  margin: 0;
+  padding: 0;
+}
+article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary {
+  display: block
+}
+audio,canvas,progress,video {
+  display: inline-block
+}
+audio:not([controls]) {
+  display: none;
+  height: 0
+}
+progress {
+  vertical-align: baseline
+}
+[hidden],template {
+  display: none
+}
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects
+}
+input,
+select,
+textarea,
+a:active,
+a:hover {
+  outline-width: 0
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted
+}
+b,strong {
+  font-weight: inherit
+}
+b,strong {
+  font-weight: bolder
+}
+dfn {
+  font-style: italic
+}
+mark {
+  background-color: #ff0;
+  color: #000
+}
+small {
+  font-size: 80%
+}
+sub,sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+}
+sub {
+  bottom: -.25em
+}
+sup {
+  top: -.5em
+}
+img {
+  border-style: none
+}
+svg:not(:root) {
+  overflow: hidden
+}
+code,kbd,pre,samp {
+  font-family: monospace,monospace;
+  font-size: 1em
+}
+figure {
+  margin: 1em 40px
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible
+}
+button,input,select,textarea {
+  font: inherit;
+  margin: 0;
+  padding: 0
+}
+optgroup {
+  font-weight: 700
+}
+button,input {
+  overflow: visible
+}
+button,select {
+  text-transform: none
+}
+[type=reset],[type=submit],button,html [type=button] {
+  -webkit-appearance: button
+}
+[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner {
+  border-style: none;
+  padding: 0
+}
+[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring {
+  outline: 1px dotted ButtonText
+}
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em
+}
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal
+}
+textarea {
+  overflow: auto
+}
+[type=checkbox],[type=radio] {
+  box-sizing: border-box;
+  padding: 0
+}
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button {
+  height: auto
+}
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px
+}
+[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none
+}
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: .54
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit
+}
+
+
+/* zgf.common.css ================================================================= */
+html,body{
+  width: 100%;
+  max-width: 640px;
+  height: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  font-family:"STXihei","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","\5FAE\8F6F\96C5\9ED1",sans-serif;
+  color: #444;
+  background-color: #fff;
+  -webkit-overflow-scrolling: touch; /* 移动端惯性滚动 */
+  -webkit-transform: translate3d(0,0,0); /* 3d动画GPU加速 */  
+  -webkit-user-select:none; /* 禁止选中文本 */
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
+}
+li,ol,ul {
+  list-style: none;
+}
+html, a, img {
+  /* 禁止长按链接与图片弹出菜单 */
+  -webkit-touch-callout: none; 
+}
+a,button,input,textarea,select,optgroup,{
+  outline: 0;
+  /* 去掉点击时的蓝色外边框和灰色半透明背景 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+}
+a{
+  /* a下划线 */
+  text-decoration: none;
+  color: #444;
+}
+input::-webkit-input-placeholder {
+  /* 修改webkit中input的planceholder样式 */
+  color:#999; 
+}
+input:focus::-webkit-input-placeholder {
+  /* 修改webkit中focus状态下input的planceholder样式 */
+  color:#444; 
+}
+/* 隐藏Android的语音输入按钮 */
+input::-webkit-input-speech-button {
+  display: none;
+}
+/* 自动填充表单的背景 */
+input:-webkit-autofill, 
+textarea:-webkit-autofill, 
+select:-webkit-autofill{
+  background-color : #fff !important;
+  background-image : none !important;
+}
+
+/* flex布局 */
+.flexbox {  
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* 水平居中 */
+.flexbox-center {
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+/* 垂直居中 */
+.flexbox-middle {
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.flexchild {
+  display: block;
+  box-flex: 1;
+  -ms-flex: 1;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  flex: 1;
+}
