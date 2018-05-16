@@ -164,6 +164,8 @@ body{
 	left: 0;
 	top: 0;
 	bottom: 0.74rem;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
 }
 .guide img{
 	display: block;
