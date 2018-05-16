@@ -15,7 +15,7 @@
 	<meta name="format-detection" content="email=no" /> 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/index.css?v=1.1">
+	<link rel="stylesheet" type="text/css" href="css/index.css?v=1.2">
 	<script type="text/javascript" src="js/163scale.js"></script>
 </head>
 <body>
@@ -81,17 +81,16 @@
 				</a>
 			</div>
 		</div>
-	</div>
+	</div>	
+</div>
 
-	<div class="foot-fix">
-		<div class="guide-foot flexbox">
-			<a class="flexchild" href="guide1.php"></a>
-			<a class="flexchild" href="guide2.php"></a>
-			<a class="flexchild" href="guide3.php"></a>
-			<a class="flexchild" href="http://www.g1999.com/zs/index.php?g=&m=m&a=index"></a>
-		</div>
+<div class="foot-fix">
+	<div class="guide-foot flexbox">
+		<a class="flexchild" href="guide1.php"></a>
+		<a class="flexchild" href="guide2.php"></a>
+		<a class="flexchild" href="guide3.php"></a>
+		<a class="flexchild" href="http://www.g1999.com/zs/index.php?g=&m=m&a=index"></a>
 	</div>
-	
 </div>
 
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>

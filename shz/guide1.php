@@ -15,7 +15,7 @@
 	<meta name="format-detection" content="email=no" /> 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/index.css?v=1.1">
+	<link rel="stylesheet" type="text/css" href="css/index.css?v=1.2">
 	<script type="text/javascript" src="js/163scale.js"></script>
 </head>
 <body>
@@ -30,16 +30,15 @@
 		<a style="position:absolute;z-index:1;top:0;left:0;width:50%;height:100%;" href="http://router.map.qq.com/short?l=5482b4fb8acb76bdf9ef7c6b79fcafd8"></a>
 		<a style="position:absolute;z-index:1;top:0;left:50%;width:50%;height:100%;" href="https://m.dianping.com/shanghai/ch10/r5"></a>
 	</div>
-	
-	<div class="foot-fix">
-		<div class="guide-foot flexbox">
-			<a class="flexchild" href="guide1.php"></a>
-			<a class="flexchild" href="guide2.php"></a>
-			<a class="flexchild" href="guide3.php"></a>
-			<a class="flexchild" href="http://www.g1999.com/zs/index.php?g=&m=m&a=index"></a>
-		</div>
-	</div>
+</div>
 
+<div class="foot-fix">
+	<div class="guide-foot flexbox">
+		<a class="flexchild" href="guide1.php"></a>
+		<a class="flexchild" href="guide2.php"></a>
+		<a class="flexchild" href="guide3.php"></a>
+		<a class="flexchild" href="http://www.g1999.com/zs/index.php?g=&m=m&a=index"></a>
+	</div>
 </div>
 
 <script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>

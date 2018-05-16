@@ -15,7 +15,7 @@
 	<meta name="format-detection" content="email=no" /> 
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
-	<link rel="stylesheet" type="text/css" href="css/index.css?v=1.1">
+	<link rel="stylesheet" type="text/css" href="css/index.css?v=1.2">
 	<script type="text/javascript" src="js/163scale.js"></script>
 </head>
 <body>
@@ -58,8 +58,8 @@
 	<div class="item" style="width:5rem;height:2rem;left:0.7rem;top: 3rem;">	    
     	<div class="animated " data-anim="bounceInRight" style="animation-duration: 1s;animation-delay: 8.1s;">       			     
     		<div class="animated " data-anim="bounceOutLeft" style="animation-duration: 0.5s;animation-delay: 10s;">
-				<div style="text-align: center;color: #fff; font-size: 0.5rem;">
-					上海厨卫展<br> 上海厨卫展<br> 上海厨卫展 <br>重要的事情说三遍					
+				<div style="width:100%;text-align: center;color: #fff; font-size: 0.5rem;">
+					上海厨卫展<br>上海厨卫展<br>上海厨卫展<br>重要的事情说三遍					
 				</div>
     		</div>
 		</div>
@@ -118,6 +118,7 @@ $(function(){
 		$(this).addClass(anim);
 	});
 	setTimeout(function(){
+		$('#slider .hd li').eq(0).trigger('click');
 		$('#box').hide();
 	},13000)
 })
@@ -126,13 +127,14 @@ $('#slider .bd li').css({
 	'height': $(window).height(),
 });
 
-TouchSlide({ 
+var slider = TouchSlide({ 
 	slideCell:"#slider",
 	titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
 	mainCell:".bd ul", 
 	effect:"leftLoop", 
 	autoPlay:true,//自动播放
-	autoPage:true //自动分页
+	autoPage:true, //自动分页
+	interTime:3000,
 });
 
 </script>

@@ -54,7 +54,7 @@
     	<div class="animated " data-anim="bounceInRight" style="animation-duration: 1s;animation-delay: 8.1s;">       			     
     		<div class="animated " data-anim="bounceOutLeft" style="animation-duration: 0.5s;animation-delay: 10s;">
 				<div style="text-align: center;color: #fff; font-size: 0.5rem;">
-					上海厨卫展<br> 上海厨卫展<br> 上海厨卫展 <br>重要的事情说三遍					
+					上海厨卫展<br>上海厨卫展<br>上海厨卫展<br>重要的事情说三遍					
 				</div>
     		</div>
 		</div>
@@ -115,8 +115,9 @@ $(function(){
 		$(this).addClass(anim);
 	});
 	setTimeout(function(){
+		$('#slider .hd li').eq(0).trigger('click');
 		$('#box').hide();
-	},18000)
+	},13000)
 })
 
 $('#slider .bd li').css({
@@ -129,7 +130,9 @@ TouchSlide({
 	mainCell:".bd ul", 
 	effect:"leftLoop", 
 	autoPlay:true,//自动播放
-	autoPage:true //自动分页
+	autoPage:true, //自动分页
+	defaultIndex:1,
+	interTime:3000,
 });
 
 </script>
