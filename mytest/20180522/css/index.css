@@ -24,6 +24,7 @@
 }
 
 body{
+	position: fixed;
 	font-size: 0.3rem;
 }
 .content{
