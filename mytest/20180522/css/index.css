@@ -165,7 +165,7 @@ body{
 	color: #000;
 }
 .rule-pop{
-	position: absolute;
+	position: fixed;
 	z-index: 100;
 	left: 50%;
 	top: 50%;
@@ -292,7 +292,7 @@ body{
 	line-height: 0.6rem;
 }
 .prize-pop{
-	position: absolute;
+	position: fixed;
 	z-index: 100;
 	left: 50%;
 	top: 50%;
