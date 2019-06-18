@@ -16,9 +16,7 @@
 		var list = [];
 		$(this).each(function() {
 			var dialog = new Dialog();
-			var options = $.extend({
-				trigger: $(this)
-			}, settings);
+			var options = $.extend({trigger: $(this)}, settings);
 			dialog.init(options);
 			list.push(dialog);
 		});
@@ -227,15 +225,15 @@
 				});
 			};
 			$(this.dialogContainer).on('click', '.js-dialog-close', function() {
-					_this.hide();
-					return false;
-				})
-				// $(window).resize(function() {
-				// 	_this.setPosition();
-				// });
-				// $(window).scroll(function() {
-				// 	_this.setPosition();
-				// })
+				_this.hide();
+				return false;
+			})
+			// $(window).resize(function() {
+			// 	_this.setPosition();
+			// });
+			// $(window).scroll(function() {
+			// 	_this.setPosition();
+			// })
 			$(document).keydown(function(e) {
 				if (e.keyCode === 27 && _this.showed) {
 					_this.hide();

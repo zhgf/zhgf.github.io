@@ -96,7 +96,7 @@
 					var top = ($(window).height()-_this.box.height())/2;
 					_this.box.css({position:'absolute',top:'50%',left:left,top:top})
 				}else if(type=='bottom'){
-					_this.box.css({position:'absolute',bottom:'0',left:'0',width:'100%'})
+					_this.box.css({position:'fixed',bottom:'0',left:'0',right:'0',width:'100%'})
 				}else{
 					_this.box.css({position:'absolute',left:this_left,top:this_top+this_h+1,width:this_w})
 				}

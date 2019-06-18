@@ -29,6 +29,8 @@ li{ list-style: none;}
 	border-top: 0.6em solid #ccc;
 }
 .SelectBox{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
 	border: 1px solid #ccc;
 	max-height: 18em;
 	height: auto;
@@ -84,7 +86,8 @@ $(function(){
 	$('select').SelectBox({
 		elAddClass:'aa',
 		boxAddClass:'bb',
-		islock: true
+		islock: true,
+		position: 'bottom'
 	})
 })
 </script>
